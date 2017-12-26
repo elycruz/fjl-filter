@@ -1,1 +1,1 @@
-export stringTrimFilter = x => (x + '').trim();
+export const stringTrimFilter = x => (x + '').trim();

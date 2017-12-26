@@ -1,1 +1,1 @@
-export stringToLowerCase = x => (x + '').toLowerCase();
+export const stringToLowerCase = x => (x + '').toLowerCase();

@@ -1,9 +1,13 @@
 export const
+
     slugOptions = obj => {
-        splitAtPattern: /[^a-z\d\-\_]/gim,
-        max: 201,
-        ...obj
+        return {
+            splitAtPattern: /[^a-z\d\-_]/gim,
+            max: 201,
+            ...obj
+        };
     },
+
     slugFilter = (ops, value) =>  {
         const {splitAtPattern, max} = slugOptions(ops);
         return (value + '')
@@ -11,7 +15,7 @@ export const
             .split(splitAtPattern)
             .filter(x => !!x.length)
             .join('-')
-            .substring(0, max)
+            .substring(0, max);
     }
 
 ;
