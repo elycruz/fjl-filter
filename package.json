@@ -4,7 +4,10 @@
   "main": "index.js",
   "repository": "git@github.com:functional-jslib/fjl-filter.git",
   "author": "Ely De La Cruz <elycruz@elycruz.com>",
-  "license": "MIT",
+  "license": "BSD",
+  "scripts": {
+    "test": "jest --testMatch **/tests/test-*.js"
+  },
   "dependencies": {
     "fjl": "^0.17.14",
     "fjl-mutable": "^0.16.0"
@@ -38,5 +41,11 @@
     "rollup-plugin-babel": "^3.0.2",
     "rollup-plugin-node-resolve": "^3.0.0",
     "yargs": "^10.0.3"
+  },
+  "jest": {
+    "testMatch": [
+      "**/tests/test-*.js"
+    ],
+    "testEnvironment": "node"
   }
 }
