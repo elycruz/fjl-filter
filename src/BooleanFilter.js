@@ -4,7 +4,7 @@
  */
 import {defineEnumProps$} from 'fjl-mutable';
 import {assign, assignDeep, keys, isBoolean, isArray, isNumber, isString, until} from 'fjl';
-import {iteratorToArray} from './Utils';
+import {iteratorToArray} from './utils';
 
 export const toBooleanFilterOptions = options => {
         const _options = defineEnumProps$([

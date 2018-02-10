@@ -1,16 +1,17 @@
 {
   "name": "fjl-filter",
-  "version": "1.0.0",
-  "main": "index.js",
+  "version": "0.5.0",
+  "main": "./dist/cjs/fjl-input.js",
+  "module": "./dist/es6-module/fjl-input.js",
   "repository": "git@github.com:functional-jslib/fjl-filter.git",
   "author": "Ely De La Cruz <elycruz@elycruz.com>",
-  "license": "BSD",
+  "license": "BSD-3-Clause",
   "scripts": {
     "test": "jest --testMatch **/tests/test-*.js"
   },
   "dependencies": {
-    "fjl": "^0.17.14",
-    "fjl-mutable": "^0.16.0"
+    "fjl": "^0.21.13",
+    "fjl-mutable": "^0.16.5"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
