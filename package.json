@@ -1,6 +1,6 @@
 {
   "name": "fjl-filter",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "main": "./dist/cjs/fjl-input.js",
   "module": "./dist/es6-module/fjl-input.js",
   "repository": "git@github.com:functional-jslib/fjl-filter.git",
