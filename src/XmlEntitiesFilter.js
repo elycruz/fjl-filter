@@ -16,7 +16,7 @@ export const xmlEntitiesOptions = ops => {
     xmlEntitiesFilter = (options, str) => {
         const {charsAssocMap} = xmlEntitiesOptions(options);
         if (!str || !str.length) { return ''; }
-        return str.replace(/<|>|"|'|&/g, s => charsAssocMap[s]);
+        return str.replace(/[<>"'&]/g, s => charsAssocMap[s]);
     }
 
 ;

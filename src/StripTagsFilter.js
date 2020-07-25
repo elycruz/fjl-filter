@@ -1,9 +1,7 @@
 /**
  * Created by elydelacruz on 3/25/16.
  */
-import {errorIfNotType$} from 'fjl-error-throwing';
-import {defineEnumProps$} from 'fjl-mutable';
-import {assign} from 'fjl';
+import {assign, defineEnumProps, errorIfNotType} from 'fjl';
 
 // @todo hard code the generated unicode values below
 const stripEscapeSeqHead = x => x.substr(2),
@@ -79,8 +77,8 @@ export const
 
     stripTags = (value, tags) => {
         const localContextName = contextName + '.stripTags';
-        errorIfNotType$(String, localContextName, 'value', value);
-        errorIfNotType$(Array, localContextName, 'tags', tags);
+        errorIfNotType(String, localContextName, 'value', value);
+        errorIfNotType(Array, localContextName, 'tags', tags);
         if (!validateNames(tags)) {
             throw new Error(`Type Format Error: ${localContextName} expects tag names passed in ` +
                 `to conform to html tag/element name format.  Please review passed in tags`);
@@ -93,8 +91,8 @@ export const
 
     stripAttribs = (value, attribs) => {
         const localContextName = contextName + '.stripAttribs';
-        errorIfNotType$(String, localContextName, 'value', value);
-        errorIfNotType$(Array, localContextName, 'attribs', attribs);
+        errorIfNotType(String, localContextName, 'value', value);
+        errorIfNotType(Array, localContextName, 'attribs', attribs);
         if (!validateNames(attribs)) {
             throw new Error(`Type Format Error: ${localContextName} expects attribute names passed in ` +
                 `to conform to html tag/element attribute name format.  Passed in attribute names: ${attribs.join(', ')}.`);
@@ -118,7 +116,7 @@ export const
 
 export class StripTagsFilter {
     constructor (options) {
-        defineEnumProps$([
+        defineEnumProps([
             [Array, 'tags', []],
             [Boolean, 'stripComments', false],
             [Array, 'attribs', []]

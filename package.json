@@ -10,8 +10,7 @@
     "test": "jest --testMatch **/tests/test-*.js"
   },
   "dependencies": {
-    "fjl": "^1.11.4",
-    "fjl-mutable": "^0.18.3"
+    "fjl": "^1.12.6"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -24,24 +23,14 @@
     "babel-register": "^6.26.0",
     "chai": "^4.1.2",
     "fjl-range": "^1.0.3",
-    "graceful-fs": "^4.1.11",
-    "gulp": "^4.0.2",
-    "gulp-babel": "^8.0.0",
-    "gulp-better-rollup": "^4.0.1",
-    "gulp-concat": "^2.6.1",
-    "gulp-eslint": "^6.0.0",
-    "gulp-fncallback": "^2.0.2",
-    "gulp-header": "^2.0.9",
-    "gulp-jsdoc3": "^2.0.0",
-    "gulp-uglify": "^3.0.0",
-    "gulp-uglify-es": "^1.0.4",
+    "graceful-fs": "^4.2.4",
     "jest": "^24.8.0",
     "lazypipe": "^1.0.1",
     "minimatch": "^3.0.4",
-    "rollup": "^1.16.7",
-    "rollup-plugin-babel": "^4.3.3",
+    "rollup": "^1.32.1",
+    "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-node-resolve": "^5.2.0",
-    "yargs": "^13.2.4"
+    "yargs": "^15.4.1"
   },
   "jest": {
     "testMatch": [

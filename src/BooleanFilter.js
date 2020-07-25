@@ -2,12 +2,11 @@
  * Created by elydelacruz on 3/25/16.
  * @todo finish the class (BooleanFilter).
  */
-import {defineEnumProps$} from 'fjl-mutable';
-import {assign, assignDeep, keys, isBoolean, isArray, isNumber, isString, until} from 'fjl';
-import {iteratorToArray} from './utils';
+import {assign, assignDeep, keys, isBoolean, isArray, isNumber, isString, until,
+defineEnumProp} from 'fjl';
 
 export const toBooleanFilterOptions = options => {
-        const _options = defineEnumProps$([
+        const _options = defineEnumProps([
             [Boolean, 'allowCasting', true],
             [Boolean, 'translations', {}],
             [Array, 'conversionRules', []],
@@ -61,7 +60,7 @@ function toConversionRules (rules) {
     if (rules && rules.indexOf(/all/i) > -1) {
         let out = new Set(keys(castingRules));
         out.delete('byNative');
-        return iteratorToArray(out.values());
+        return Array.from(out.values());
     }
     return rules;
 }
